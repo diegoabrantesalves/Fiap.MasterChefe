@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
+    <ProjectReference Include="..\Fiap.MasterChefe.Aplicacao\Fiap.MasterChefe.Aplicacao.csproj" />
   </ItemGroup>
 
 </Project>

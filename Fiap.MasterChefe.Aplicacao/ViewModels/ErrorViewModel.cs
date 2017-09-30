@@ -1,6 +1,6 @@
 using System;
 
-namespace Fiap.MasterChefe.Web.Models
+namespace Fiap.MasterChefe.Aplicacap.ViewModels
 {
     public class ErrorViewModel
     {

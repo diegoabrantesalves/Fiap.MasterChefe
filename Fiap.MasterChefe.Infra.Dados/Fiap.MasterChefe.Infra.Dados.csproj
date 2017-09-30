@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entidades\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Repositorio\" />
   </ItemGroup>
 
 </Project>
