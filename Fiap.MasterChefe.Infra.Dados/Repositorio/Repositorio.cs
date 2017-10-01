@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Fiap.MasterChefe.Dominio.Interfaces;
+using Fiap.MasterChefe.Infra.Dados.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,12 +8,12 @@ using System.Text;
 
 namespace Fiap.MasterChefe.Infra.Dados.Repositorio
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepositorio<TEntity> where TEntity : class
     {
-        protected readonly Context Db;
+        protected readonly Contexto Db;
         protected readonly DbSet<TEntity> DbSet;
 
-        public Repository(Context context)
+        public Repository(Contexto context)
         {
             Db = context;
             DbSet = Db.Set<TEntity>();

@@ -12,4 +12,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

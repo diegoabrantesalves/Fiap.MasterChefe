@@ -6,8 +6,10 @@
 
   <ItemGroup>
     <Folder Include="AutoMapper\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,12 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Fiap.MasterChefe.Dominio.Entidades;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
 namespace Fiap.MasterChefe.Infra.Dados.Context
 {
-    public class Context : DbContext
+    public class Contexto : DbContext
     {
-        //public DbSet<Customer> Customers { get; set; }
+        public DbSet<Receita> Receitas { get; set; }
+
+        public DbSet<Ingredientes> Ingredientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
