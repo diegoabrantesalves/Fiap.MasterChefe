@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Fiap.MasterChefe.Infra.CrossCutting.IoC;
 
 namespace Fiap.MasterChefe.Web
 {
@@ -22,6 +23,12 @@ namespace Fiap.MasterChefe.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+
+
+            // .NET Native DI Abstraction
+            RegisterServices(services);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +52,11 @@ namespace Fiap.MasterChefe.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            // Adding dependencies from another layers (isolated from Presentation)
+            NativeInjector.RegisterServices(services);
         }
     }
 }

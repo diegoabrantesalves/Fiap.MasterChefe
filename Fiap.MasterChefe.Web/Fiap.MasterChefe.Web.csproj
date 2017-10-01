@@ -9,6 +9,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.0" />
   </ItemGroup>
 
@@ -18,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fiap.MasterChefe.Aplicacao\Fiap.MasterChefe.Aplicacao.csproj" />
+    <ProjectReference Include="..\Fiap.MasterChefe.Infra.CrossCutting.IoC\Fiap.MasterChefe.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
 
 </Project>
