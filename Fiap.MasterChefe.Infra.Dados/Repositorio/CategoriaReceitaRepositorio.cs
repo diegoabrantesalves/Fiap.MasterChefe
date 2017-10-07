@@ -7,12 +7,10 @@ using System.Text;
 
 namespace Fiap.MasterChefe.Infra.Dados.Repositorio
 {
-    public class ReceitaRepositorio : Repository<Receita>, IReceitaRepositorio
+    public class CategoriaReceitaRepositorio : Repository<CategoriaReceita>, ICategoriaReceitaRepositorio
     {
-        public ReceitaRepositorio(Contexto context) : base(context)
+        public CategoriaReceitaRepositorio(Contexto context) : base(context)
         {
-
         }
-
     }
 }

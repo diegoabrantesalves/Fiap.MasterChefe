@@ -7,12 +7,17 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Fiap.MasterChefe.Infra.Dados.Mappings
 {
-    public class IngredientesMap : IEntityTypeConfiguration<Ingredientes>
+    public class IngredienteMap : IEntityTypeConfiguration<Ingrediente>
     {
-        public void Configure(EntityTypeBuilder<Ingredientes> builder)
+        public void Configure(EntityTypeBuilder<Ingrediente> builder)
         {
             builder.Property(c => c.Id)
                .HasColumnName("Id");
+
+            builder.Property(c => c.Descricao)
+               .HasColumnType("varchar(300)")
+               .HasMaxLength(300)
+               .IsRequired();
         }
     }
 }

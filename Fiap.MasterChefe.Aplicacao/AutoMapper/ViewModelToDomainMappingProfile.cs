@@ -12,7 +12,10 @@ namespace Fiap.MasterChefe.Aplicacao.AutoMapper
     {
         public ViewModelToDomainMappingProfile()
         {
+            CreateMap<CategoriaReceitaViewModel, CategoriaReceita>();
             CreateMap<ReceitaViewModel, Receita>();
+            CreateMap<IngredienteViewModel,Ingrediente>();
+            CreateMap<ModoDePreparoViewModel, ModoDePreparo>();
         }
     }
 }

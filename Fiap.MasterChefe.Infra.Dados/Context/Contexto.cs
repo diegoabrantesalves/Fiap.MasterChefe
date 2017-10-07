@@ -7,9 +7,10 @@ namespace Fiap.MasterChefe.Infra.Dados.Context
 {
     public class Contexto : DbContext
     {
-        public DbSet<Receita> Receitas { get; set; }
-
-        public DbSet<Ingredientes> Ingredientes { get; set; }
+        public DbSet<CategoriaReceita> CategoriaReceita { get; set; }
+        public DbSet<Receita> Receita { get; set; }
+        public DbSet<Ingrediente> Ingrediente { get; set; }
+        public DbSet<ModoDePreparo> ModoDePreparo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

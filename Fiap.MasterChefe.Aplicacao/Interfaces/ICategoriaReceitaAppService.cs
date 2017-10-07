@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Fiap.MasterChefe.Aplicacao.Interfaces
 {
-    public interface IReceitaAppService : IAppService<ReceitaViewModel>
+    public interface ICategoriaReceitaAppService:IAppService<CategoriaReceitaViewModel>
     {
 
     }

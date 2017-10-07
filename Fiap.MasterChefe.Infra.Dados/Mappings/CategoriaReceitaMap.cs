@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Fiap.MasterChefe.Infra.Dados.Mappings
 {
-    public class ReceitaMap : IEntityTypeConfiguration<Receita>
+    public class CategoriaReceitaMap : IEntityTypeConfiguration<CategoriaReceita>
     {
-        public void Configure(EntityTypeBuilder<Receita> builder)
+        public void Configure(EntityTypeBuilder<CategoriaReceita> builder)
         {
             builder.Property(c => c.Id)
                .HasColumnName("Id");

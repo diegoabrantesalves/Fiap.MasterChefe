@@ -19,7 +19,6 @@ namespace Fiap.MasterChefe.Aplicacao.Services
             _receitaRepositorio = receitaRepositorio;
         }
 
-
         public IEnumerable<ReceitaViewModel> GetAll()
         {
             return _mapper.Map<List<ReceitaViewModel>>(_receitaRepositorio.GetAll()); 
