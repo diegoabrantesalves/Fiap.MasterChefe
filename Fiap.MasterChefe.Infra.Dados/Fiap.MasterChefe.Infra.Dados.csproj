@@ -16,9 +16,4 @@
     <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

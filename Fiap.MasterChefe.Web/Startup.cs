@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Fiap.MasterChefe.Infra.CrossCutting.IoC;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Fiap.MasterChefe.Infra.Dados.Context;
+using Fiap.MasterChefe.Aplicacao.AutoMapper;
 
 namespace Fiap.MasterChefe.Web
 {
@@ -24,10 +28,13 @@ namespace Fiap.MasterChefe.Web
         {
             services.AddMvc();
 
-
-
+            services.AddAutoMapper();
+            AutoMapperConfig.RegisterMappings();
             // .NET Native DI Abstraction
             RegisterServices(services);
+
+            //services.AddDbContext<Contexto>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         }
 

@@ -21,9 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Dados", "4.1 - Dados"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{C4F39290-E3EB-491B-BA26-3E64B5B1E924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.MasterChefe.Infra.Dados", "Fiap.MasterChefe.Infra.Dados\Fiap.MasterChefe.Infra.Dados.csproj", "{6A49C425-193D-468A-A60A-082342D19417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.MasterChefe.Infra.Dados", "Fiap.MasterChefe.Infra.Dados\Fiap.MasterChefe.Infra.Dados.csproj", "{6A49C425-193D-468A-A60A-082342D19417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.MasterChefe.Infra.CrossCutting.IoC", "Fiap.MasterChefe.Infra.CrossCutting.IoC\Fiap.MasterChefe.Infra.CrossCutting.IoC.csproj", "{A5754660-721A-477E-8C43-663B501B283D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.MasterChefe.Infra.CrossCutting.IoC", "Fiap.MasterChefe.Infra.CrossCutting.IoC\Fiap.MasterChefe.Infra.CrossCutting.IoC.csproj", "{A5754660-721A-477E-8C43-663B501B283D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 -Services", "0 -Services", "{03442C36-E60C-46D9-B2B3-B96463C5C3F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.MasterChefe.Api", "Fiap.MasterChefe.Api\Fiap.MasterChefe.Api.csproj", "{04E5773B-7E21-49F2-B19D-EABCD6B387BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{A5754660-721A-477E-8C43-663B501B283D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5754660-721A-477E-8C43-663B501B283D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5754660-721A-477E-8C43-663B501B283D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E5773B-7E21-49F2-B19D-EABCD6B387BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E5773B-7E21-49F2-B19D-EABCD6B387BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E5773B-7E21-49F2-B19D-EABCD6B387BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E5773B-7E21-49F2-B19D-EABCD6B387BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{C4F39290-E3EB-491B-BA26-3E64B5B1E924} = {DB4BBEA7-F3FB-406A-B36B-4DBDE4B593EE}
 		{6A49C425-193D-468A-A60A-082342D19417} = {D2702691-7A2D-443C-A473-C5A55BA348AB}
 		{A5754660-721A-477E-8C43-663B501B283D} = {C4F39290-E3EB-491B-BA26-3E64B5B1E924}
+		{04E5773B-7E21-49F2-B19D-EABCD6B387BE} = {03442C36-E60C-46D9-B2B3-B96463C5C3F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D6979E57-009C-4B7E-8923-8C9F697ECA68}

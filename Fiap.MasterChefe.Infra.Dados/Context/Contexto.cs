@@ -14,7 +14,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.AddConfiguration(new CustomerMap());
-
+            modelBuilder.Entity<Receita>().ToTable("Receita");
+            modelBuilder.Entity<Ingredientes>().ToTable("Enrollment");
             base.OnModelCreating(modelBuilder);
         }
 
