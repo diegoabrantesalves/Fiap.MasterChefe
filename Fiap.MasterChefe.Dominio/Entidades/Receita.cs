@@ -11,6 +11,6 @@ namespace Fiap.MasterChefe.Dominio.Entidades
         public int TempodePreparo { get; set; }
         public int Rendimento { get; set; }
         public string MododePreparo { get; set; }
-        public List<Ingredientes> Ingredientes { get; set; }
+        public ICollection<Ingredientes> Ingredientes { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using System;
 namespace Fiap.MasterChefe.Infra.Dados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20171007152406_MasterChefe")]
+    [Migration("20171007175801_MasterChefe")]
     partial class MasterChefe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
