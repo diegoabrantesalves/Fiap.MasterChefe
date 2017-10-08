@@ -5,21 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    <a asp-action="Create">Create New</a>
+<p><br /><br />
+    <a asp-action="Create" class="current" style="color:white;">Criar novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-                <th>
+                <th style="color:white;">
                     @Html.DisplayNameFor(model => model.Descricao)
                 </th>
-                <th>
+                <th style="color:white;">
                     @Html.DisplayNameFor(model => model.TempodePreparo)
                 </th>
-                <th>
+                <th style="color:white;">
                     @Html.DisplayNameFor(model => model.Rendimento)
                 </th>
             <th></th>
