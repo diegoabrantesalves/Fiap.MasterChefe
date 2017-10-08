@@ -23,4 +23,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

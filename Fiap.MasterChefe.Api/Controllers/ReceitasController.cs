@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Fiap.MasterChefe.Dominio.Entidades;
 
 namespace Fiap.MasterChefe.Api.Controllers
 {
