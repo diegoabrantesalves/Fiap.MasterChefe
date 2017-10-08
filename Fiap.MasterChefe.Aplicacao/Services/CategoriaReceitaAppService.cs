@@ -44,7 +44,7 @@ namespace Fiap.MasterChefe.Aplicacao.Services
 
         public void Update(CategoriaReceitaViewModel obj)
         {
-            _categoriaReceitaRepositorio.Add(_mapper.Map<CategoriaReceita>(obj));
+            _categoriaReceitaRepositorio.Update(_mapper.Map<CategoriaReceita>(obj));
             _categoriaReceitaRepositorio.SaveChanges();
         }
 

@@ -42,7 +42,7 @@ namespace Fiap.MasterChefe.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind("Id,Descricao,TempodePreparo,Rendimento,MododePreparo")] CategoriaReceitaViewModel model)
+        public ActionResult Create(CategoriaReceitaViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace Fiap.MasterChefe.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Guid id, [Bind("Id,Descricao,TempodePreparo,Rendimento,MododePreparo")] CategoriaReceitaViewModel model)
+        public ActionResult Edit(Guid id, CategoriaReceitaViewModel model)
         {
             if (id != model.Id)
                 return NotFound();
