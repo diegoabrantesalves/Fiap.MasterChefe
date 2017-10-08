@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Fiap.MasterChefe.Aplicacao.ViewModels
@@ -7,7 +8,11 @@ namespace Fiap.MasterChefe.Aplicacao.ViewModels
     public class ReceitaViewModel
     {
         public Guid Id { get; set; }
+
+        [Display(Name = "Nome")]
         public string Descricao { get; set; }
+
+        [Display(Name = "Tempo de Preparo")]
         public int TempodePreparo { get; set; }
         public int Rendimento { get; set; }
 
