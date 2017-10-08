@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
 using System.Web.Http;
-
+using Fiap.MasterChefe.Dominio.Entidades;
 
 namespace Fiap.MasterChefe.Api.Controllers
 {
