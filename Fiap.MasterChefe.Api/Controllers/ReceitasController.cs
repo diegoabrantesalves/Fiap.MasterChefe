@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
+using System.Web.Http;
+
 
 namespace Fiap.MasterChefe.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Receitas")]
+    [Microsoft.AspNetCore.Mvc.Route("api/Receitas")]
     public class ReceitasController : ApiController
     {
         private readonly Receita
