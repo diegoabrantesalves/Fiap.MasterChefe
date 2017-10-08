@@ -25,7 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Fiap.MasterChefe.Aplicacao\Fiap.MasterChefe.Aplicacao.csproj" />
+    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
+    <ProjectReference Include="..\Fiap.MasterChefe.Infra.CrossCutting.IoC\Fiap.MasterChefe.Infra.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\Fiap.MasterChefe.Infra.Dados\Fiap.MasterChefe.Infra.Dados.csproj" />
+    <ProjectReference Include="..\Fiap.MasterChefe.Web\Fiap.MasterChefe.Web.csproj" />
   </ItemGroup>
 
 </Project>
