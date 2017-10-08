@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Web;
 using System.Web.Http;
 using Fiap.MasterChefe.Dominio.Entidades;
+using Fiap.MasterChefe.Aplicacao.Services;
+using Fiap.MasterChefe.Aplicacao.ViewModels;
+using System.Net;
+using System.Net.Http;
 
 namespace Fiap.MasterChefe.Api.Controllers
 {
@@ -14,38 +18,56 @@ namespace Fiap.MasterChefe.Api.Controllers
     [Microsoft.AspNetCore.Mvc.Route("api/Receitas")]
     public class ReceitasController : ApiController
     {
-        private readonly Receita
+        private ReceitaAppService receitaService;
 
-        // GET: api/Receitas
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
+        private ReceitasController(ReceitaAppService receitaService) {
+
         }
 
-        // GET: api/Receitas/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public IEnumerable<ReceitaViewModel> GetAllProdutos()
         {
-            return "value";
+            return receitaService.GetAll();
         }
-        
-        // POST: api/Receitas
-        [HttpPost]
-        public void Post([FromBody]string value)
+
+        public ReceitaViewModel GetProduto(Guid id)
         {
+            ReceitaViewModel item = receitaService.GetById(id);
+            if (item == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return item;
         }
-        
-        // PUT: api/Receitas/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+
+        public IEnumerable<ReceitaViewModel> GetReceitasPorDescricao(string categoria)
         {
+            return receitaService.GetAll().Where(
+                p => string.Equals(p.Descricao, categoria, StringComparison.OrdinalIgnoreCase));
         }
-        
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+
+        public HttpResponseMessage PostProduto(ReceitaViewModel item)
         {
+            receitaService.Add(item);
+            var response = Request.CreateResponse<ReceitaViewModel>(HttpStatusCode.Created, item);
+            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            response.Headers.Location = new Uri(uri);
+            return response;
+        }
+
+        public void PutProduto(Guid id, ReceitaViewModel produto)
+        {
+            produto.Id = id;
+        }
+
+        public void DeleteProduto(Guid id)
+        {
+            ReceitaViewModel item = receitaService.GetById(id);
+            if (item == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            receitaService.Remove(id);
         }
     }
 }
+
