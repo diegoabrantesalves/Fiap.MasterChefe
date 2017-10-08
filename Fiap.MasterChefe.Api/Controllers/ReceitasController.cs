@@ -5,68 +5,68 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
-using System.Web.Http;
 using Fiap.MasterChefe.Dominio.Entidades;
 using Fiap.MasterChefe.Aplicacao.Services;
 using Fiap.MasterChefe.Aplicacao.ViewModels;
 using System.Net;
 using System.Net.Http;
+using Fiap.MasterChefe.Aplicacao.Interfaces;
 
 namespace Fiap.MasterChefe.Api.Controllers
 {
-    [Produces("application/json")]
-    [Microsoft.AspNetCore.Mvc.Route("api/Receitas")]
-    public class ReceitasController : ApiController
+    [Route("api/[controller]")]
+    public class ReceitasController : Controller
     {
-        private ReceitaAppService receitaService;
+        private readonly IReceitaAppService _receitaService;
 
-        private ReceitasController(ReceitaAppService receitaService) {
-
-        }
-
-        public IEnumerable<ReceitaViewModel> GetAllProdutos()
+        public ReceitasController(IReceitaAppService receitaService)
         {
-            return receitaService.GetAll();
+            _receitaService = receitaService;
+        }
+        [HttpGet]
+        public IEnumerable<ReceitaViewModel> GetAll()
+        {
+            return _receitaService.GetAll();
         }
 
+        [HttpGet]
         public ReceitaViewModel GetProduto(Guid id)
         {
-            ReceitaViewModel item = receitaService.GetById(id);
+            ReceitaViewModel item = _receitaService.GetById(id);
             if (item == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return null;
             }
             return item;
         }
-
+        [HttpGet]
         public IEnumerable<ReceitaViewModel> GetReceitasPorDescricao(string categoria)
         {
-            return receitaService.GetAll().Where(
+            return _receitaService.GetAll().Where(
                 p => string.Equals(p.Descricao, categoria, StringComparison.OrdinalIgnoreCase));
         }
-
+        [HttpPost]
         public HttpResponseMessage PostProduto(ReceitaViewModel item)
         {
-            receitaService.Add(item);
-            var response = Request.CreateResponse<ReceitaViewModel>(HttpStatusCode.Created, item);
+            _receitaService.Add(item);
+            var response = item;
             string uri = Url.Link("DefaultApi", new { id = item.Id });
-            response.Headers.Location = new Uri(uri);
-            return response;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
-
+        [HttpPut]
         public void PutProduto(Guid id, ReceitaViewModel produto)
         {
             produto.Id = id;
         }
-
+        [HttpDelete]
         public void DeleteProduto(Guid id)
         {
-            ReceitaViewModel item = receitaService.GetById(id);
+            ReceitaViewModel item = _receitaService.GetById(id);
             if (item == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return;
             }
-            receitaService.Remove(id);
+            _receitaService.Remove(id);
         }
     }
 }

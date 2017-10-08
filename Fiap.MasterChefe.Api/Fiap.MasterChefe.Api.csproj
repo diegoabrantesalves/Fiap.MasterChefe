@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.0.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
@@ -26,10 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fiap.MasterChefe.Aplicacao\Fiap.MasterChefe.Aplicacao.csproj" />
-    <ProjectReference Include="..\Fiap.MasterChefe.Dominio\Fiap.MasterChefe.Dominio.csproj" />
     <ProjectReference Include="..\Fiap.MasterChefe.Infra.CrossCutting.IoC\Fiap.MasterChefe.Infra.CrossCutting.IoC.csproj" />
-    <ProjectReference Include="..\Fiap.MasterChefe.Infra.Dados\Fiap.MasterChefe.Infra.Dados.csproj" />
-    <ProjectReference Include="..\Fiap.MasterChefe.Web\Fiap.MasterChefe.Web.csproj" />
   </ItemGroup>
 
 </Project>
