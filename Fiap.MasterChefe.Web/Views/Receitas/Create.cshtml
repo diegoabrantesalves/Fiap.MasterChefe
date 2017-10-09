@@ -29,26 +29,16 @@
                     <span asp-validation-for="Rendimento" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Ingrediente" class="control-label"></label>
-                    <textarea asp-for="Ingrediente" class="form-control" rows="6"> </textarea>
-                    <span asp-validation-for="Ingrediente" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ModoDePreparo" class="control-label"></label>
-                    <textarea asp-for="ModoDePreparo" class="form-control" rows="6"> </textarea>
-                    <span asp-validation-for="ModoDePreparo" class="text-danger"></span>
-                </div>
-                <div class="form-group">
                     <input type="submit" value="Salvar" class="btn btn-default" />
                 </div>
             </form>
         </div>
     </div>
 
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
+<div>
+    <a asp-action="Index" style="color:white">Voltar</a>
 </div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
