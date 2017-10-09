@@ -29,6 +29,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CategoriaReceitaId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Ingrediente = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModoDePreparo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Rendimento = table.Column<int>(type: "int", nullable: false),
                     TempodePreparo = table.Column<int>(type: "int", nullable: false)
                 },

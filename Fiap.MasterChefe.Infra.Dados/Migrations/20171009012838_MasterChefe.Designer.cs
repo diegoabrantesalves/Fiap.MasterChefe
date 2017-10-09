@@ -11,7 +11,7 @@ using System;
 namespace Fiap.MasterChefe.Infra.Dados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20171009002121_MasterChefe")]
+    [Migration("20171009012838_MasterChefe")]
     partial class MasterChefe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,6 +79,10 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                     b.Property<Guid?>("CategoriaReceitaId");
 
                     b.Property<string>("Descricao");
+
+                    b.Property<string>("Ingrediente");
+
+                    b.Property<string>("ModoDePreparo");
 
                     b.Property<int>("Rendimento");
 

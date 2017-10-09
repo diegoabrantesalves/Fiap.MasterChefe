@@ -16,6 +16,12 @@ namespace Fiap.MasterChefe.Aplicacao.ViewModels
         public int TempodePreparo { get; set; }
         public int Rendimento { get; set; }
 
+        [Display(Name = "Ingredientes")]
+        public string Ingrediente { get; set; }
+
+        [Display(Name = "Modo de Preparo")]
+        public string ModoDePreparo { get; set; }
+
         public CategoriaReceitaViewModel CategoriaReceita { get; set; }
         public List<IngredienteViewModel> Ingredientes { get; set; }
         public List<ModoDePreparoViewModel> ModosDePreparo { get; set; }

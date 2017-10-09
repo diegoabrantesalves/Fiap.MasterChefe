@@ -43,7 +43,7 @@ namespace Fiap.MasterChefe.Aplicacao.Services
 
         public void Update(ReceitaViewModel receitaViewModel)
         {
-            _receitaRepositorio.Add(_mapper.Map<Receita>(receitaViewModel));
+            _receitaRepositorio.Update(_mapper.Map<Receita>(receitaViewModel));
             _receitaRepositorio.SaveChanges();
         }
 

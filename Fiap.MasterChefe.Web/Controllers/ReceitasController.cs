@@ -53,7 +53,7 @@ namespace Fiap.MasterChefe.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Id,Descricao,TempodePreparo,Rendimento,MododePreparo")] ReceitaViewModel receitaViewModel)
+        public IActionResult Create(ReceitaViewModel receitaViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Fiap.MasterChefe.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, [Bind("Id,Descricao,TempodePreparo,Rendimento,MododePreparo")] ReceitaViewModel receitaViewModel)
+        public IActionResult Edit(Guid id, ReceitaViewModel receitaViewModel)
         {
             if (id != receitaViewModel.Id)
             {

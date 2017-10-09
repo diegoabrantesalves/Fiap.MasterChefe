@@ -79,6 +79,10 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
 
                     b.Property<string>("Descricao");
 
+                    b.Property<string>("Ingrediente");
+
+                    b.Property<string>("ModoDePreparo");
+
                     b.Property<int>("Rendimento");
 
                     b.Property<int>("TempodePreparo");
