@@ -2,12 +2,11 @@
 @{
     ViewData["Title"] = "Delete";
 }
-<h2>Delete</h2>
-<h3>Are you sure you want to delete this?</h3>
+<h2 style="color:black">Delete</h2>
+<h3 style="color:black">Are you sure you want to delete this?</h3>
 <div>
-    <h4>CategoriaReceitaViewModel</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal" style="color:white">
         <dt>
             @Html.DisplayNameFor(model => model.Id)
         </dt>
@@ -19,6 +18,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlImagem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UrlImagem)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.ExibirTelaPrincipal)

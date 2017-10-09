@@ -4,15 +4,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using Fiap.MasterChefe.Aplicacao.Interfaces;
 
 namespace Fiap.MasterChefe.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private ICategoriaReceitaAppService _categoriaReceitaAppService;
+
+        public HomeController(ICategoriaReceitaAppService categoriaReceitaAppService)
+        {
+            _categoriaReceitaAppService = categoriaReceitaAppService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var model = _categoriaReceitaAppService.GetAll().Where(c => c.ExibirTelaPrincipal);
+            return View(model);
         }
 
         public IActionResult About()

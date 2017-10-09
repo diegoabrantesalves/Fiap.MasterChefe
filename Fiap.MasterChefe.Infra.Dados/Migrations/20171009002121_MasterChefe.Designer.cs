@@ -11,7 +11,7 @@ using System;
 namespace Fiap.MasterChefe.Infra.Dados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20171007232810_MasterChefe")]
+    [Migration("20171009002121_MasterChefe")]
     partial class MasterChefe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,6 +29,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                     b.Property<string>("Descricao");
 
                     b.Property<bool>("ExibirTelaPrincipal");
+
+                    b.Property<string>("UrlImagem");
 
                     b.HasKey("Id");
 

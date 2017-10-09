@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Fiap.MasterChefe.Aplicacao.ViewModels.CategoriaReceitaViewModel>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -15,21 +16,39 @@
 </div>
 <div class="main">
     <div class="container_12">
-       
-        
+
+
         <div class="grid_12">
-            <div class="car_wrap"><br />
+            <div class="car_wrap">
+                <br />
                 <h2>Destaques</h2><br />
                 <a href="#" class="prev"></a><a href="#" class="next"></a>
                 <ul class="carousel1">
-                    <li>
-                        <div>
-                            <img src="~/images/page1_img1.jpg" alt="">
-                            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                            <span> Dorem ipsum dolor amet consectetur</span>
-                            <div class="price">45$</div>
-                        </div>
-                    </li>
+                    @if (Model.Any())
+                    {
+                        @foreach (var item in Model)
+                        {
+                            string url = $"images/{item.UrlImagem}.jpg";
+                            <li>
+                                <div>
+                                    <img src="@url" alt="">
+                                    <div class="col1 upp"> <a href="#">@item.Descricao</a></div>
+                                </div>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li>
+                            <div>
+                                <div class="col1 upp"> <a href="#">Não há categorias cadastradas.</a></div>
+                                @*<span> Dorem ipsum dolor amet consectetur</span>
+                                    <div class="price">45$</div>*@
+                            </div>
+                        </li>
+                    }
+
+@*
                     <li>
                         <div>
                             <img src="~/images/page1_img2.jpg" alt="">
@@ -38,39 +57,40 @@
                             <div class="price">45$</div>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <img src="~/images/page1_img3.jpg" alt="">
-                            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                            <span> Dorem ipsum dolor amet consectetur</span>
-                            <div class="price">45$</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="~/images/page1_img4.jpg" alt="">
-                            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                            <span> Dorem ipsum dolor amet consectetur</span>
-                            <div class="price">45$</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="~/images/page1_img3.jpg" alt="">
-                            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
-                            <span> Dorem ipsum dolor amet consectetur</span>
-                            <div class="price">45$</div>
-                        </div>
-                    </li>
+
+    <li>
+        <div>
+            <img src="~/images/page1_img3.jpg" alt="">
+            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+            <span> Dorem ipsum dolor amet consectetur</span>
+            <div class="price">45$</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="~/images/page1_img4.jpg" alt="">
+            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+            <span> Dorem ipsum dolor amet consectetur</span>
+            <div class="price">45$</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="~/images/page1_img3.jpg" alt="">
+            <div class="col1 upp"> <a href="#">Lorem ipsum doamet consectet</a></div>
+            <span> Dorem ipsum dolor amet consectetur</span>
+            <div class="price">45$</div>
+        </div>
+    </li>*@
                 </ul>
             </div><br /><br /><br />
         </div><br /><br /><br />
         <div class="clear"></div>
-       
+
         <div class="clear"></div>
     </div>
 </div>
-    
+
 <div class="row">
-    
+
 </div>

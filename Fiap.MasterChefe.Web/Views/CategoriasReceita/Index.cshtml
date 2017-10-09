@@ -4,16 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
+<h2 style="color:black;font-weight:200">Lista</h2>
+<br />
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" style="color:blue">Create New</a>
 </p>
 <table class="table">
-    <thead>
+    <thead style="color:darkblue">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlImagem)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ExibirTelaPrincipal)
@@ -21,11 +24,14 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody style="color:white">
 @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlImagem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ExibirTelaPrincipal)

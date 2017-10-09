@@ -29,6 +29,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
 
                     b.Property<bool>("ExibirTelaPrincipal");
 
+                    b.Property<string>("UrlImagem");
+
                     b.HasKey("Id");
 
                     b.ToTable("CategoriaReceita");
