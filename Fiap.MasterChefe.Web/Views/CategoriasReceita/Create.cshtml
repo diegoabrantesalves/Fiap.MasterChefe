@@ -4,27 +4,27 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2 style="color:white">Nova categoria</h2>
 
-<h4>CategoriaReceitaViewModel</h4>
+<h4 style="color:white">Preencha os dados abaixo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
+                <label asp-for="Descricao" class="control-label" style="color:chartreuse"></label>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UrlImagem" class="control-label"></label>
+                <label asp-for="UrlImagem" class="control-label" style="color:chartreuse"></label>
                 <input asp-for="UrlImagem" class="form-control" />
                 <span asp-validation-for="UrlImagem" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <div class="checkbox">
-                    <label>
+                    <label style="color:chartreuse">
                         <input asp-for="ExibirTelaPrincipal" /> @Html.DisplayNameFor(model => model.ExibirTelaPrincipal)
                     </label>
                 </div>
@@ -37,6 +37,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @*<a asp-action="Index">Back to List</a>*@
 </div>
 
