@@ -16,6 +16,9 @@ namespace Fiap.MasterChefe.Aplicacao.ViewModels
         [Display(Name = "Exibe na Home Page?")]
         public bool ExibirTelaPrincipal { get; set; }
 
+        [Display(Name = "Nome da imagem")]
+        public string UrlImagem { get; set; }
+
         public List<ReceitaViewModel> Receitas { get; set; }
     }
 }

@@ -34,6 +34,7 @@
                             <li class="current"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contato</a></li>
+                            <li><a asp-area="" asp-controller="CategoriasReceita" asp-action="Index">Categorias</a></li>
                             <li><a asp-area="" asp-controller="Receitas" asp-action="Index">Receitas</a></li>
                         </ul>
                     </nav>
@@ -43,10 +44,10 @@
             </div>
         </div>
     </header>
-    @RenderBody()
+    
 
     <div class="container body-content">
-       
+       @RenderBody()
         <hr />
         <footer>
             <p>&copy; 2017 - Master Chefe</p>

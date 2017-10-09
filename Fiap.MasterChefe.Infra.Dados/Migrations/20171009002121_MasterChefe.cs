@@ -14,7 +14,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ExibirTelaPrincipal = table.Column<bool>(type: "bit", nullable: false)
+                    ExibirTelaPrincipal = table.Column<bool>(type: "bit", nullable: false),
+                    UrlImagem = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -4,9 +4,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 style="color:black">Edit</h2>
 
-<h4>CategoriaReceitaViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,19 +13,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input asp-for="Id" class="form-control" type="hidden" />
             <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
+                <label asp-for="Descricao" class="control-label" style="color:white"></label>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="UrlImagem" class="control-label" style="color:white"></label>
+                <input asp-for="UrlImagem" class="form-control" />
+                <span asp-validation-for="UrlImagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <div class="checkbox">
-                    <label>
-                        <input asp-for="ExibirTelaPrincipal" type="checkbox" /> @Html.DisplayNameFor(model => model.ExibirTelaPrincipal)
+                    <label style="color:white">
+                        <input asp-for="ExibirTelaPrincipal" type="checkbox" style="color:white"/> @Html.DisplayNameFor(model => model.ExibirTelaPrincipal)
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default"/>
             </div>
         </form>
     </div>
