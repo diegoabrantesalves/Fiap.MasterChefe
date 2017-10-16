@@ -13,10 +13,12 @@ namespace Fiap.MasterChefe.Web.Controllers
     public class ReceitasController : Controller
     {
         private readonly IReceitaAppService _receitaAppService;
+        private readonly ICategoriaReceitaAppService _categoriaAppService;
 
-        public ReceitasController(IReceitaAppService receitaAppService)
+        public ReceitasController(IReceitaAppService receitaAppService, ICategoriaReceitaAppService categoriaAppService)
         {
             _receitaAppService = receitaAppService;
+            _categoriaAppService = categoriaAppService;
         }
 
         // GET: Receitas
@@ -45,6 +47,7 @@ namespace Fiap.MasterChefe.Web.Controllers
         // GET: Receitas/Create
         public IActionResult Create()
         {
+            ViewBag.Categorias = _categoriaAppService.GetAll();
             return View();
         }
 
@@ -72,6 +75,7 @@ namespace Fiap.MasterChefe.Web.Controllers
                 return NotFound();
             }
 
+            ViewBag.Categorias = _categoriaAppService.GetAll();
             var receitaViewModel = _receitaAppService.GetById(id.Value);
             if (receitaViewModel == null)
             {

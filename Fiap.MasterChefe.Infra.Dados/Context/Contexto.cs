@@ -14,7 +14,6 @@ namespace Fiap.MasterChefe.Infra.Dados.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
             base.OnModelCreating(modelBuilder);
         }
 

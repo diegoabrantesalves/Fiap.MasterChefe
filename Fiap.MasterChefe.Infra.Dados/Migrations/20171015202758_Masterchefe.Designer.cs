@@ -11,8 +11,8 @@ using System;
 namespace Fiap.MasterChefe.Infra.Dados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20171009012838_MasterChefe")]
-    partial class MasterChefe
+    [Migration("20171015202758_Masterchefe")]
+    partial class Masterchefe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -76,7 +76,7 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid?>("CategoriaReceitaId");
+                    b.Property<Guid>("CategoriaReceitaId");
 
                     b.Property<string>("Descricao");
 
@@ -113,7 +113,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                 {
                     b.HasOne("Fiap.MasterChefe.Dominio.Entidades.CategoriaReceita", "CategoriaReceita")
                         .WithMany("Receitas")
-                        .HasForeignKey("CategoriaReceitaId");
+                        .HasForeignKey("CategoriaReceitaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container body-content">
-    <h2>Delete</h2>
+    <h2 style="color:white">Delete</h2>
 
-    <h3>Are you sure you want to delete this?</h3>
+    <h3 style="color:white">Deseja excluir esta receita?</h3>
     <div>
         <h4>ReceitaViewModel</h4>
         <hr />
@@ -35,7 +35,9 @@
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
             <input type="submit" value="Apagar" class="btn btn-default" /> |
-            <a asp-action="Index">Voltar</a>
         </form>
     </div>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-default">Voltar a Lista</a>
 </div>

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Fiap.MasterChefe.Infra.Dados.Migrations
 {
-    public partial class MasterChefe : Migration
+    public partial class Masterchefe : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CategoriaReceitaId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    CategoriaReceitaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ingrediente = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ModoDePreparo = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -42,7 +42,7 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                         column: x => x.CategoriaReceitaId,
                         principalTable: "CategoriaReceita",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

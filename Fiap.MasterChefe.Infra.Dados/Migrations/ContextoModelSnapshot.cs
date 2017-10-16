@@ -75,7 +75,7 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid?>("CategoriaReceitaId");
+                    b.Property<Guid>("CategoriaReceitaId");
 
                     b.Property<string>("Descricao");
 
@@ -112,7 +112,8 @@ namespace Fiap.MasterChefe.Infra.Dados.Migrations
                 {
                     b.HasOne("Fiap.MasterChefe.Dominio.Entidades.CategoriaReceita", "CategoriaReceita")
                         .WithMany("Receitas")
-                        .HasForeignKey("CategoriaReceitaId");
+                        .HasForeignKey("CategoriaReceitaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

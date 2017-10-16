@@ -2,8 +2,8 @@
 @{
     ViewData["Title"] = "Delete";
 }
-<h2 style="color:black">Delete</h2>
-<h3 style="color:black">Are you sure you want to delete this?</h3>
+<h2 style="color:white">Delete</h2>
+<h3 style="color:white">Deseja excluir esta categoria?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal" style="color:white">
@@ -34,7 +34,8 @@
     </dl>
 
     <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" class="btn btn-default">Voltar para a Lista</a>
+        <input type="submit" value="Delete" class="btn btn-default" />
     </form>
 </div>
+
